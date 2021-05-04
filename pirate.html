@@ -1,0 +1,144 @@
+<!-- doctype html -->
+<!-- pirate.html                    Hannah Golob-->
+<!-- Translates words/phrases from      -->
+<!-- English to pirate at the click of a button.         -->
+<!-- =================================================== -->
+
+<html>
+ <head>
+   <title> Pirate Translator </title>
+ </head>
+
+ <body style="background-color:lightblue">
+   <div style="text-align:center">
+   <img src="./imagesFP/pirateIMG2.png" width=165 height=165 alt="Pirate Captain" 
+         onmouseover="this.src='./imagesFP/pirateIMG1.png';"
+         onmouseout="this.src='./imagesFP/pirateIMG2.png';">
+   <h3 style="font-family:palatino">A Land Lover's Guide to Being a Pirate</h3> 
+   <p style="font-family:palatino">Simply click on the buttons to translate
+      words and/or phrases from English to pirate talk.
+
+   </p>
+   <p style="font-family:palatino"> Greetings: 
+     <input type="button" value="hello"
+            onmouseover="this.style.backgroundColor='lightgreen';"
+            onmouseout="this.style.backgroundColor='';" 
+            onclick="document.getElementById('outputDiv').innerHTML= 
+                       document.getElementById('outputDiv').innerHTML + 'ahoy ';">
+     <input type="button" value="Pardon Me" 
+            onmouseover="this.style.backgroundColor='lightgreen';"
+            onmouseout="this.style.backgroundColor='';"
+            onclick="document.getElementById('outputDiv').innerHTML= 
+                       document.getElementById('outputDiv').innerHTML + 'avast ';"> 
+     <input type="button" value="Excuse Me"
+            onmouseover="this.style.backgroundColor='lightgreen';"
+            onmouseout="this.style.backgroundColor='';" 
+            onclick="document.getElementById('outputDiv').innerHTML=
+                       document.getElementById('outputDiv').innerHTML + 'arrr ';"> 
+   </p>
+   <p style="font-family:palatino"> People:
+     <input type="button" value="stranger"
+            onmouseover="this.style.backgroundColor='wheat';"
+            onmouseout="this.style.backgroundColor='';" 
+            onclick="document.getElementById('outputDiv').innerHTML= 
+                       document.getElementById('outputDiv').innerHTML + 'scurvy dog ';">
+     <input type="button" value="Sir" 
+            onmouseover="this.style.backgroundColor='wheat';"
+            onmouseout="this.style.backgroundColor='';" 
+            onclick="document.getElementById('outputDiv').innerHTML= 
+                       document.getElementById('outputDiv').innerHTML + 'matey ';">
+     <input type="button" value="Madam" 
+            onmouseover="this.style.backgroundColor='wheat';"
+            onmouseout="this.style.backgroundColor='';" 
+            onclick="document.getElementById('outputDiv').innerHTML= 
+                       document.getElementById('outputDiv').innerHTML + 'proud beauty ';">
+     <input type="button" value="Officer" 
+            onmouseover="this.style.backgroundColor='wheat';"
+            onmouseout="this.style.backgroundColor='';" 
+            onclick="document.getElementById('outputDiv').innerHTML= 
+                       document.getElementById('outputDiv').innerHTML + 'foul blaggart ';"> 
+   </p> 
+   <p style="font-family:palatino"> Questions: 
+     <input type="button" value="Where is" 
+            onmouseover="this.style.backgroundColor='pink';"
+            onmouseout="this.style.backgroundColor='';" 
+            onclick="document.getElementById('outputDiv').innerHTML= 
+                       document.getElementById('outputDiv').innerHTML + 'what be ';">  
+     <input type="button" value="Can you help me find" 
+            onmouseover="this.style.backgroundColor='pink';"
+            onmouseout="this.style.backgroundColor='';"
+            onclick="document.getElementById('outputDiv').innerHTML= 
+                       document.getElementById('outputDiv').innerHTML + 'know ye ';"> 
+     <input type="button" value="How far is it to " 
+            onmouseover="this.style.backgroundColor='pink';"
+            onmouseout="this.style.backgroundColor='';"
+            onclick="document.getElementById('outputDiv').innerHTML= 
+                       document.getElementById('outputDiv').innerHTML + 'how many leagues to ';">  
+     <input type="button" value="Is that" 
+            onmouseover="this.style.backgroundColor='pink';"
+            onmouseout="this.style.backgroundColor='';"
+            onclick="document.getElementById('outputDiv').innerHTML= 
+                       document.getElementById('outputDiv').innerHTML + 'be that ';">
+  </p>
+  <p style="font-family:palatino"> Articles: 
+
+    <input type="button" value="The"
+            onmouseover="this.style.backgroundColor='yellowgreen';"
+            onmouseout="this.style.backgroundColor='';" 
+            onclick="document.getElementById('outputDiv').innerHTML= 
+                       document.getElementById('outputDiv').innerHTML + 'th\' ';">
+    <input type="button" value="Nearby" 
+            onmouseover="this.style.backgroundColor='yellowgreen';"
+            onmouseout="this.style.backgroundColor='';" 
+            onclick="document.getElementById('outputDiv').innerHTML= 
+                       document.getElementById('outputDiv').innerHTML + 'broadside ';">
+    <input type="button" value="My" 
+            onmouseover="this.style.backgroundColor='yellowgreen';"
+            onmouseout="this.style.backgroundColor='';" 
+            onclick="document.getElementById('outputDiv').innerHTML= 
+                       document.getElementById('outputDiv').innerHTML + 'me ';">
+    <input type="button" value="Your" 
+            onmouseover="this.style.backgroundColor='yellowgreen';"
+            onmouseout="this.style.backgroundColor='';" 
+            onclick="document.getElementById('outputDiv').innerHTML=   
+                       document.getElementById('outputDiv').innerHTML + 'yer ';">
+  </p>  
+  <p style="font-family:palatino"> Places: 
+
+   <input type="button" value="Restroom" 
+            onmouseover="this.style.backgroundColor='violet';"
+            onmouseout="this.style.backgroundColor='';"
+            onclick="document.getElementById('outputDiv').innerHTML=   
+                       document.getElementById('outputDiv').innerHTML + 'head ';">
+   <input type="button" value="Restaurant" 
+            onmouseover="this.style.backgroundColor='violet';"
+            onmouseout="this.style.backgroundColor='';"
+            onclick="document.getElementById('outputDiv').innerHTML=   
+                       document.getElementById('outputDiv').innerHTML + 'galley ';"> 
+   <input type="button" value="Hotel" 
+            onmouseover="this.style.backgroundColor='violet';"
+            onmouseout="this.style.backgroundColor='';"
+            onclick="document.getElementById('outputDiv').innerHTML=   
+                       document.getElementById('outputDiv').innerHTML + 'fleabag inn ';"> 
+   <input type="button" value="Bank" 
+            onmouseover="this.style.backgroundColor='violet';"
+            onmouseout="this.style.backgroundColor='';"
+            onclick="document.getElementById('outputDiv').innerHTML=   
+                       document.getElementById('outputDiv').innerHTML + 'buried treasure ';"> 
+  </p>
+  <p style="font-family:palatino">
+    <input type="button" value="Clear Translation" 
+           onmouseover="this.style.backgroundColor='skyblue';"
+           onmouseout="this.style.backgroundColor='';"
+           onclick="document.getElementById('outputDiv').innerHTML= ' ';">
+    <input type="button" value="New Line" 
+           onmouseover="this.style.backgroundColor='skyblue';"
+           onmouseout="this.style.backgroundColor='';"
+           onclick="document.getElementById('outputDiv').innerHTML = 
+                      document.getElementById('outputDiv').innerHTML + '<br>';">
+  </p> 
+  </div>                    
+   <hr>
+   <div id="outputDiv"> </div>
+ </body>
+</html>
