@@ -1,0 +1,100 @@
+<!doctype html>
+<!-- DoubleDie.html              Hannah Golob-->
+<!-- Rolls 2 die, 
+     marks number of times a double, 7, and natural 7 are rolled, 
+     resets double, roll, 7, and natural 7 count --> 
+<!-- ====================================================== -->
+
+<html>
+ <head>
+   <title> Dice Rolling Odds </title>
+   <script type="text/javascript" src="./imagesFP/random.js">
+   </script>
+   <script type="text/javascript">
+     function RollDice()
+     // Assumes: die images and the file random.js are in imagesFP
+     // Results: displays 2 random die rolls & keeps a count in the variable rollSpan
+     // the file "random.js" contains the function RandomInt(low, high)
+            //the function RandomInt(low, high)
+            // Given : low <= high
+            // Returns : a random integer in the range [low, high]
+ 
+     {
+       var roll1, roll2;
+       
+       roll1 = RandomInt(1, 6);  
+       roll2 = RandomInt(1, 6);
+
+       imgName1='./imagesFP/die' + roll1 + '.gif';
+       imgName2='./imagesFP/die' + roll2 + '.gif';
+       document.getElementById('dieImg1').src =imgName1;
+       document.getElementById('dieImg2').src =imgName2;
+        // count how many times the die are rolled     
+       document.getElementById('rollSpan').innerHTML=
+         parseFloat(document.getElementById('rollSpan').innerHTML) + 1;
+
+      // check to see if die matches (doubles)
+       if (roll1 == roll2)
+       {
+       // CODE TO BE EXECUTED WHEN DOUBLES ARE ROLLED 
+         document.getElementById('doubleSpan').innerHTML=
+           parseFloat(document.getElementById('doubleSpan').innerHTML) + 1;
+         alert('Congrats - you rolled a double!');
+       }
+      //check to see if die add up to 7
+       else if (roll1+roll2 == 7)
+       {
+       //  CODE TO BE EXECUTED WHEN 7S ARE ROLLED 
+          document.getElementById('sevenSpan').innerHTML=
+            parseFloat(document.getElementById('sevenSpan').innerHTML) + 1;
+           alert('Congrats - you rolled a Seven');
+        // check to see if natural 7 roll 
+         if (roll1 == 3||roll1 == 4)
+         {
+         //  Code To Be Executed When 7s Are Rolled and we have a natural seven
+            document.getElementById('naturalSpan').innerHTML=
+              parseFloat(document.getElementById('naturalSpan').innerHTML) + 1; 
+             alert('Congrats - you  rolled a Natural Seven');
+         }
+       }
+     }
+      function ResetCounters()
+      // Assumes: rollSpan and doubleSpan contain numbers
+      // Results: resets the numbers of the spans to 0
+      { 
+       document.getElementById('rollSpan').innerHTML=0;
+       document.getElementById('doubleSpan').innerHTML=0;
+       document.getElementById('sevenSpan').innerHTML=0;
+       document.getElementById('naturalSpan').innerHTML=0;
+      }
+   </script>
+ </head>
+
+ <body style="background-color:#d9b3ff">
+   <div style="text-align:center">
+    <h1 style="font-family:american typewriter"> How many Doubles and Sevens are possible? </h1> 
+     <p>
+     <img id="dieImg1" alt="die image"
+        src="./imagesFP/die1.gif">
+    <img id="dieImg2" alt="die image"
+        src="./imagesFP/die1.gif">
+     </p>
+     <input type="button" value="Click to Roll" onclick="RollDice();"
+                 onmouseover="this.style.backgroundColor='#b366ff';"
+                 onmouseout="this.style.backgroundColor='';">
+     <input type="button" value="Reset" onclick="ResetCounters();"
+                 onmouseover="this.style.backgroundColor='#b366ff';"
+                 onmouseout="this.style.backgroundColor='';">
+     <hr>
+     <p>
+       Number of rolls: <span id="rollSpan">0</span>
+       <br>
+       Number of doubles: <span id="doubleSpan">0</span>
+       <br>
+       Number of sevens: <span id="sevenSpan">0</span>
+       <br>
+       Number of natural sevens: <span id="naturalSpan">0</span>
+     </p>
+   </div>
+ </body>
+</html>
