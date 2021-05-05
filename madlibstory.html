@@ -1,0 +1,73 @@
+<!doctype html>
+<!-- story.html              Hannah Golob -->
+<!-- a mad lib story time -->
+<!-- =============================================== -->
+
+<html
+<head>
+ <title>It's Story Time</title> 
+</head>
+
+ <body style="background-color:#ffc299">
+ <div style="text-align:center">
+  <h2 style="font-family:american typewriter"> Welcome to Hannah's Story Time </h2> 
+ </div>
+  <hr>
+
+<p> 
+Enter a boys name: <input type="text" id="boyBox" value=" ">
+<br> 
+Enter a girls name: <input type="text" id="girlBox" value=" ">
+<br>
+Enter a verb: <input type="text" id="verbBox" value=" ">
+<br>
+Enter a color: <input type="text" id="colorBox" value=" ">
+<br> 
+Enter an adjective: <input type="text" id="adjectiveBox" value=" ">
+<br>
+Enter a body of water: <input type="text" id="waterBox" value=" ">
+<br> 
+Enter a verb: <input type="text" id="VerbBox" value=" ">
+<br>
+Enter a verb (past tense): <input type="text" id="verbpastBox" value=" ">
+<br>
+Enter a number: <input type="text" id="numberBox" value=" ">
+</p>
+
+<input type="button" value="Click for a Story" 
+       onmouseover="this.style.backgroundColor='#ff8000';"
+       onmouseout="this.style.backgroundColor='';"
+       onclick="boybox=document.getElementById('boyBox').value;
+               girlbox=document.getElementById('girlBox').value;
+                  verb=document.getElementById('verbBox').value;
+                 color=document.getElementById('colorBox').value;
+             adjective=document.getElementById('adjectiveBox').value;
+                 water=document.getElementById('waterBox').value;
+              verb2=document.getElementById('VerbBox').value;
+              verbpast=document.getElementById('verbpastBox').value;
+                number=document.getElementById('numberBox').value;
+               document.getElementById('outputDiv').innerHTML=
+           '<p> Once upon a time, ' + '<br> There were two little children, one named ' + boybox + 
+           ' and the other named ' + girlbox + '. ' + boybox + ' and ' + girlbox + ' went ' + verb +
+           ' one day. '+ '<br> The sky was a very pretty ' + color + '. ' + ' And it was a '
+             + adjective +
+           ', <br> summers day. ' + boybox + ' and ' + girlbox + ' splashed around in the ' + water +
+           '<br> until the sun began to set.</p>' + 
+           '<p>That evening ' + boybox + ' and ' + girlbox + ' spent the whole time ' + verb2 +
+           ' marshmallows. ' + '<br> They ' + verbpast + ' out by the fire, and counted ' 
+           + number + ' stars. </p> ' ;"> 
+ 
+<input type="button" value="Clear Story"
+       onmouseover="this.style.backgroundColor='#ff8000';"
+       onmouseout="this.style.backgroundColor='';"
+       onclick="document.getElementById('outputDiv').innerHTML=' ';">
+
+   <hr>
+   <div id="outputDiv"></div>
+   <hr>
+    <input type="button" style = "background-color:#e65c00;color:white" value="Back"
+          onclick="location.href='myProjects.html' ;">
+ </body> 
+
+</html>
+ 
